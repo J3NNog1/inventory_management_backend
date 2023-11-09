@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product List</title>
+</head>
+<body>
+<h2>Product List</h2>
+<table border="1">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Current Quantity</th>
+        <th>Min Threshold</th>
+        <th>Max Threshold</th>
+        <th>Expiry Date</th>
+        <th>Markdown Date</th>
+        <!-- Add other columns as needed -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="product : ${products}">
+        <td th:text="${product.id}"></td>
+        <td th:text="${product.name}"></td>
+        <td th:text="${product.currentQuantity}"></td>
+        <td th:text="${product.minThreshold}"></td>
+        <td th:text="${product.maxThreshold}"></td>
+        <td th:text="${product.expiryDate}"></td>
+        <td th:text="${product.markdownDate}"></td>
+        <!-- Add other columns as needed -->
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

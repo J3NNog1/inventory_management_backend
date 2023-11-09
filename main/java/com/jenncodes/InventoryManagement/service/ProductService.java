@@ -11,6 +11,7 @@ import java.util.List;
 @Data
 @Service
 public class ProductService {
+
     private List<Product> productList = new ArrayList<>();
 
     public void saveProduct(Product product) {
@@ -32,6 +33,10 @@ public class ProductService {
         if (index != -1) {
             productList.set(index, product);
         }
+    }
+
+    public List<Product> getAllProducts() {
+        return productList;
     }
 
 }
