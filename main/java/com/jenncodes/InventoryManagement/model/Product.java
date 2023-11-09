@@ -27,14 +27,14 @@ public class Product {
     @Column(name="name")
     private String name;
 
-    @Column(name="current_stock")
-    private int currentStock;
+    @Column(name="current_quantity")
+    private int currentQuantity;
 
-    @Column(name="min_stock_treshold")
-    private int minStockTreshold;
+    @Column(name="min_treshold")
+    private int minTreshold;
 
-    @Column(name="max_stock_treshold")
-    private int maxStockTreshold;
+    @Column(name="max_treshold")
+    private int maxTreshold;
 
     @Column(name="expiry_date")
     private Date expiryDate;
